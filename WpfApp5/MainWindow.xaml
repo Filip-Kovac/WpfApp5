@@ -1,0 +1,61 @@
+﻿<Window x:Class="WpfApp5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp5"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="1000"
+        MinHeight="600" MinWidth="1000">
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="0.65*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Label Content="Jméno" Grid.Column="1" Grid.Row="1" FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+        <Label x:Name="JmenoError" Grid.Row="1" Grid.Column="3" Foreground="Red" VerticalAlignment="Bottom"/>
+
+        <Label Content="Příjmení" Grid.Column="1" Grid.Row="2" FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+        <Label x:Name="PrijmeniError" Grid.Row="2" Grid.Column="3" Foreground="Red" VerticalAlignment="Bottom"/>
+        
+        <Label Content="Rok narození" Grid.Column="1" Grid.Row="3" FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+        <Label x:Name="NarozeniError" Grid.Row="3" Grid.Column="3" Foreground="Red" VerticalAlignment="Bottom"/>
+        
+        <Label Content="Nejvyšší vzdělání" Grid.Column="1" Grid.Row="4" FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+        <Label x:Name="VzdelaniError" Grid.Row="4" Grid.Column="3" Foreground="Red" VerticalAlignment="Bottom"/>
+        
+        <Label Content="Pracovní pozice" Grid.Column="1" Grid.Row="5" FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+        <Label x:Name="PoziceError" Grid.Row="5" Grid.Column="3" Foreground="Red" VerticalAlignment="Bottom"/>
+        
+        <Label Content="Hrubý plat v Kč" Grid.Column="1" Grid.Row="6" FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+        <Label x:Name="PlatError" Grid.Row="6" Grid.Column="3" Foreground="Red" VerticalAlignment="Bottom"/>
+
+        <TextBox Name="Jmeno" Grid.Column="2" Grid.Row="1" FontSize="30" VerticalAlignment="Bottom" LostFocus="Jmeno_LostFocus"/>
+        <TextBox Name="Prijmeni" Grid.Column="2" Grid.Row="2" FontSize="30" VerticalAlignment="Bottom" LostFocus="Prijmeni_LostFocus"/>
+        <TextBox Name="Rok_narozeni" Grid.Column="2" Grid.Row="3" FontSize="30" VerticalAlignment="Bottom" LostFocus="Narozeni_LostFocus"/>
+        <ComboBox Name="Vzdelani" Grid.Column="2" Grid.Row="4" FontSize="30" VerticalAlignment="Bottom" LostFocus="Vzdelani_LostFocus">
+            <ComboBoxItem Content="Základní škola"/>
+            <ComboBoxItem Content="Střední škola"/>
+            <ComboBoxItem Content="Vysoká škola"/>
+        </ComboBox>
+        <TextBox Name="Pracovni_pozice" Grid.Column="2" Grid.Row="5" FontSize="30" VerticalAlignment="Bottom" LostFocus="Pozice_LostFocus"/>
+        <TextBox Name="Plat" Grid.Column="2" Grid.Row="6" FontSize="30" VerticalAlignment="Bottom" LostFocus="Plat_LostFocus"/>
+        <Button Name="Hotovo" Content="Zapsat" Grid.Column="2" Grid.Row="7" FontSize="30" Margin="10" Click="Hotovo_Click"/>
+
+    </Grid>
+</Window>
